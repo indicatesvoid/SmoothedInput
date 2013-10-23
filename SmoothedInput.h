@@ -37,7 +37,7 @@ class SmoothedInput {
       average = total / numReadings;
       
       // delay between reads for stability
-      delay(5);
+      delay(1);
     }
     
     int getCurrentReading() {
