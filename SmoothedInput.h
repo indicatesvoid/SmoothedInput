@@ -7,17 +7,10 @@
 class SmoothedInput {
   public:
   
-    SmoothedInput(int _pin, int _smoothness) {
+    SmoothedInput(int _pin, int _smoothness = 10) {
       inputPin = _pin;
       numReadings = _smoothness;
       
-      index = total = average = 0;
-    }
-
-    SmoothedInput(int _pin) {
-      inputPin = _pin;
-      numReadings = 10;
-
       index = total = average = 0;
     }
     
@@ -45,7 +38,7 @@ class SmoothedInput {
     }
     
     int getSmoothedReading() {
-        return average;
+      return average;
     }
     
   private:
