@@ -12,9 +12,7 @@ class SmoothedInput {
       numReadings = _smoothness;
       
       index = total = average = 0;
-    }
-    
-    void init() {
+
       // init all readings to 0
       for(int reading = 0; reading < numReadings; reading++) readings[reading] = 0;
     }

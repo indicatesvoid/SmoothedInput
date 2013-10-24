@@ -27,16 +27,7 @@ If you omit the _smoothness property, a default of 10 samples will be used:
 SmoothedInput thirdInput = SmoothedInput(2);
 ```
 
-4) Call the 'init' function on each SmoothedInput object (probably in your setup() function). init() only needs to be called once on every object:
-```
-void setup() {
-    firstInput.init();
-    secondInput.init();
-    thirdInput.init();
-}
-```
-
-5) In your loop() function, call the 'smooth' function on each SmoothedInput object:
+4) In your loop() function, call the 'smooth' function on each SmoothedInput object:
 ```
 void loop() {
     firstInput.smooth();
@@ -45,7 +36,7 @@ void loop() {
 }
 ```
 
-6) Use the 'getSmoothedReading' function to retrieve the smoothed value, or the 'getCurrentReading' function to get the raw, unsmoothed value from your sensor:
+5) Use the 'getSmoothedReading' function to retrieve the smoothed value, or the 'getCurrentReading' function to get the raw, unsmoothed value from your sensor:
 
 ```
 Serial.println(firstInput.getSmoothedReading()); // prints smoothed reading
